@@ -19,3 +19,12 @@
 *.exe
 *.out
 *.app
+
+# CMake liftovers
+CMakeCache.*
+CMakeFiles/*
+CMakeScripts
+*.xcodeproj/*
+Makefile
+cmake_install.cmake
+
