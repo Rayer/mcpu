@@ -27,6 +27,8 @@ std::list<int> CustomAdmSocketProtocol::getPortArray() {
 std::shared_ptr<Session> CustomAdmSocketProtocol::parseAuthRequest(const char* in) {
 
 	Session* session = nullptr;
+    
+    //add a builder for session
 	static Session* s_dummySession = new Session();
 	s_dummySession->security_token = "1234567";
 	s_dummySession->user_id = "Rayer";
