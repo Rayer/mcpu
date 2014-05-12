@@ -9,21 +9,28 @@
 #ifndef MCPU_AdmSocketProtocol_h
 #define MCPU_AdmSocketProtocol_h
 
-#include "ISocketProtocol.h"
+#include "SocketProtocol.h"
 
 #include <string>
+#include <memory>
 
 struct Session {
+	std::string security_token;
     time_t join_time;
     time_t expire_time;
     std::string user_id;
     std::string user_group;
 };
 
-class AdmSocketProtocol : public ISocketProtocol<const char*> {
-    virtual Session parseAuthRequest();
-    virtual void sendAuthSuccess();
-    virtual void sendAuthFail();
+class AdmSocketProtocol : public SocketProtocol<const char*> {
+
+
+protected:
+	virtual ~AdmSocketProtocol() {};
+	virtual const char* processMessage(const char* in);
+    virtual std::shared_ptr<Session> parseAuthRequest(const char* parse) = 0;
+    virtual std::string sendAuthSuccess(const Session& session) = 0;
+    virtual std::string sendAuthFail() = 0;
 };
 
 #endif

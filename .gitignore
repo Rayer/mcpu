@@ -27,4 +27,9 @@ CMakeScripts
 *.xcodeproj/*
 Makefile
 cmake_install.cmake
+.cproject
+.kdev4/mcpu.kdev4
+.project
+.settings/org.eclipse.cdt.codan.core.prefs
+
 

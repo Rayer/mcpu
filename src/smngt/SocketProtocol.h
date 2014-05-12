@@ -6,18 +6,20 @@
 //
 //
 
-#ifndef __MCPU__ISocketProtocol__
-#define __MCPU__ISocketProtocol__
+#ifndef __MCPU__SocketProtocol__
+#define __MCPU__SocketProtocol__
 
 #include <list>
 
+class SocketWrapper;
+
 template<typename DataType>
-class ISocketProtocol {
+class SocketProtocol {
 public:
+	virtual ~SocketProtocol(){};
     virtual std::list<int> getPortArray() = 0;
     virtual int getSocketType() = 0;
-    virtual DataType recv() = 0;
-    virtual void send(DataType data) = 0;
+    virtual DataType processMessage(DataType in) = 0;
 };
 
 #endif /* defined(__MCPU__ISocketProtocol__) */
