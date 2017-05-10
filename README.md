@@ -1,7 +1,7 @@
-#Multipropose Communication Process Unit (MCPU)
+# Multipropose Communication Process Unit (MCPU)
 -----
 
-##Intruduction
+## Intruduction
 
 This is a small daemon-like application which provides these functionality :
 
@@ -10,7 +10,7 @@ This is a small daemon-like application which provides these functionality :
 - Provides customized communication. These MCPUs can be communicated each other, and the communication protocol can be altered, too.
 - Supports KAD protocol.
 
-##Specification
+## Specification
 
 It is divided into these parts
 
@@ -20,7 +20,7 @@ It is divided into these parts
 - Basic communication management, with a replaceable communication protocol.
 - Basic KAD hook
 
-###MCPU Management Center
+### MCPU Management Center
 It will provide these feature 
 
 1. Given a protocol file, it will try to discovery and try to authorize LOCAL MCPUs
@@ -28,11 +28,13 @@ It will provide these feature
 3. It can provide managed MCPU list to authorized host, and it can be host, too.
 
 
-###Daemon-lize module
+### Daemon-lize module
 1. It can be customized daemonlized, just provide a thread or a process.
 2. It also provide a default linux daemon
 
 
-###Socket management module
-###Communication module
-###KAD hook and Network Discovery
+### Socket management module
+
+### Communication module
+
+### KAD hook and Network Discovery
