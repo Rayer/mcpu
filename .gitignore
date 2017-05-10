@@ -33,3 +33,5 @@ cmake_install.cmake
 .settings/org.eclipse.cdt.codan.core.prefs
 MCPU.build/
 
+.idea/
+cmake-build-debug/
